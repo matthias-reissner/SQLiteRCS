@@ -1,0 +1,93 @@
+head	1.1;
+access;
+symbols
+	nested:1.1.1.1.1
+	feature:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2026.11.17.16.09.05;	author Matthias;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2026.11.17.16.09.07;	author Matthias;	state Exp;
+branches
+	1.1.1.1.1.1;
+next	1.1.1.2;
+
+1.1.1.2
+date	2026.11.17.16.09.12;	author Matthias;	state Exp;
+branches;
+next	;
+
+1.1.1.1.1.1
+date	2026.11.17.16.09.08;	author Matthias;	state Exp;
+branches;
+next	1.1.1.1.1.2;
+
+1.1.1.1.1.2
+date	2026.11.17.16.09.10;	author Matthias;	state Exp;
+branches;
+next	;
+
+
+desc
+@Description
+@
+
+
+1.1
+log
+@initial
+@
+text
+@base
+@
+
+
+1.1.1.1
+log
+@feature-first
+@
+text
+@d1 1
+a1 1
+branch first
+@
+
+
+1.1.1.2
+log
+@feature-latest
+@
+text
+@d1 1
+a1 1
+branch latest
+@
+
+
+1.1.1.1.1.1
+log
+@nested-first
+@
+text
+@d1 1
+a1 1
+nested first
+@
+
+
+1.1.1.1.1.2
+log
+@nested-latest
+@
+text
+@d1 1
+a1 1
+nested latest
+@
