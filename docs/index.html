@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SQLiteRCS speichert Textrevisionen als RCS-Archive in SQLite. Lerne den Ablauf kennen und probiere Check-in, Branches und Diff direkt im Browser.">
+  <meta name="description" content="SQLiteRCS speichert Textrevisionen als RCS-Archive in SQLite. Lerne den Ablauf kennen und probiere Check-in, Branches und Diff direkt im Browser." data-i18n-content="meta.description">
   <meta name="theme-color" content="#f5f4ef">
-  <title>SQLiteRCS — Revisionsgeschichte in SQLite</title>
+  <title data-i18n="meta.title">SQLiteRCS — Revisionsgeschichte in SQLite</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,59 +13,60 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="SQLiteRCS Startseite">
+    <a class="brand" href="#" aria-label="SQLiteRCS Startseite" data-i18n-aria="aria.home">
       <span class="brand-mark" aria-hidden="true">r.</span>
       <span>SQLite<span class="brand-light">RCS</span></span>
     </a>
-    <nav aria-label="Hauptnavigation">
-      <a href="#ablauf">Ablauf</a>
-      <a href="#sql">SQL</a>
-      <a href="#installation">Installation</a>
-      <a href="#playground">Playground</a>
+    <nav aria-label="Hauptnavigation" data-i18n-aria="aria.navigation">
+      <a href="#ablauf" data-i18n="nav.flow">Ablauf</a>
+      <a href="#sql" data-i18n="nav.sql">SQL</a>
+      <a href="#installation" data-i18n="nav.install">Installation</a>
+      <a href="#playground" data-i18n="nav.playground">Playground</a>
     </nav>
+    <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language to English">EN</button>
     <a class="top-link" href="https://github.com/matthias-reissner/SQLiteRCS" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> SQLite-Erweiterung · Textuelle RCS-Archive</p>
-        <h1>Revisionsgeschichte.<br><span>Direkt in SQLite.</span></h1>
-        <p class="hero-lede">SQLiteRCS speichert Textrevisionen als RCS-Archive in einer SQLite-Spalte. Lerne den Ablauf kennen — oder probiere Check-in, Branches und Diff direkt hier aus.</p>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">SQLite-Erweiterung · Textuelle RCS-Archive</span></p>
+        <h1 data-i18n-html="hero.title">Revisionsgeschichte.<br><span>Direkt in SQLite.</span></h1>
+        <p class="hero-lede" data-i18n="hero.description">SQLiteRCS speichert Textrevisionen als RCS-Archive in einer SQLite-Spalte. Lerne den Ablauf kennen — oder probiere Check-in, Branches und Diff direkt hier aus.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#playground">Demo ausprobieren <span aria-hidden="true">↓</span></a>
-          <a class="button button-quiet" href="#installation">Installation ansehen <span aria-hidden="true">↘</span></a>
+          <a class="button button-dark" href="#playground"><span data-i18n="hero.demo">Demo ausprobieren</span><span aria-hidden="true">↓</span></a>
+          <a class="button button-quiet" href="#installation"><span data-i18n="hero.install">Installation ansehen</span><span aria-hidden="true">↘</span></a>
         </div>
         <div class="hero-facts">
-          <div><strong>01</strong><span>RCS-Archiv</span></div>
-          <div><strong>02</strong><span>SQLite Extension</span></div>
-          <div><strong>03</strong><span>Open Source</span></div>
+          <div><strong>01</strong><span data-i18n="hero.fact1">RCS-Archiv</span></div>
+          <div><strong>02</strong><span data-i18n="hero.fact2">SQLite Extension</span></div>
+          <div><strong>03</strong><span data-i18n="hero.fact3">Open Source</span></div>
         </div>
       </div>
-      <div class="hero-visual" aria-label="Schematische RCS-Revisionsgeschichte">
+      <div class="hero-visual" aria-label="Schematische RCS-Revisionsgeschichte" data-i18n-aria="aria.revisionSketch">
         <div class="visual-top"><span>README,v</span><span class="visual-badge">ARCHIVE</span></div>
-        <div class="visual-head"><div><strong id="hero-head">1.3</strong><span>Aktuelle Revision</span></div><span class="head-pill">HEAD</span></div>
+        <div class="visual-head"><div><strong id="hero-head">1.3</strong><span data-i18n="hero.currentRevision">Aktuelle Revision</span></div><span class="head-pill">HEAD</span></div>
         <div class="timeline" id="hero-timeline">
-          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.3</strong><span>Dokumentation ergänzt</span></div><time>14:32</time></div>
-          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.2</strong><span>Erste Anpassung</span></div><time>14:08</time></div>
-          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.1</strong><span>Erste Revision</span></div><time>13:45</time></div>
+          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.3</strong><span data-i18n="hero.sample3">Dokumentation ergänzt</span></div><time>14:32</time></div>
+          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.2</strong><span data-i18n="hero.sample2">Erste Anpassung</span></div><time>14:08</time></div>
+          <div class="timeline-item"><span class="timeline-node"></span><div><strong>1.1</strong><span data-i18n="hero.sample1">Erste Revision</span></div><time>13:45</time></div>
         </div>
         <div class="archive-snippet"><span>head</span> 1.3;<br><span>1.3</span> date ...; next 1.2;<br><span>1.2</span> date ...; next 1.1;<br><span>text</span> @...@;</div>
-        <div class="visual-caption"><span class="caption-line"></span> Eine Spalte. Jede Revision.</div>
+        <div class="visual-caption"><span class="caption-line"></span><span data-i18n="hero.caption">Eine Spalte. Jede Revision.</span></div>
       </div>
     </section>
 
     <section class="section section-paper" id="ablauf">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow">Ein kleiner, klarer Ablauf</p>
-          <h2>Von Text zu Revision —<br><span>mit SQL.</span></h2>
-          <p>Die Anwendung steuert, wann eine Revision entsteht. Das Archiv selbst bleibt ein Wert in deiner SQLite-Tabelle.</p>
+          <p class="eyebrow" data-i18n="flow.eyebrow">Ein kleiner, klarer Ablauf</p>
+          <h2 data-i18n-html="flow.title">Von Text zu Revision —<br><span>mit SQL.</span></h2>
+          <p data-i18n="flow.description">Die Anwendung steuert, wann eine Revision entsteht. Das Archiv selbst bleibt ein Wert in deiner SQLite-Tabelle.</p>
         </div>
         <div class="steps-grid">
-          <article class="step-card"><span class="step-number">01</span><h3>Archiv ablegen</h3><p>Eine TEXT-Spalte hält ein RCS-Archiv pro Datensatz.</p><code>history TEXT</code></article>
-          <article class="step-card"><span class="step-number">02</span><h3>Änderung einchecken</h3><p><code>rcs_checkin</code> liefert ein neues Archiv zurück. Speichere den Rückgabewert.</p><code>UPDATE documents SET history = …</code></article>
-          <article class="step-card"><span class="step-number">03</span><h3>Version abrufen</h3><p>Checkout, Metadaten und Diff sind SQL-Funktionen — direkt abfragbar.</p><code>rcs_checkout(history, '1.1')</code></article>
+          <article class="step-card"><span class="step-number">01</span><h3 data-i18n="flow.step1.title">Archiv ablegen</h3><p data-i18n="flow.step1.description">Eine TEXT-Spalte hält ein RCS-Archiv pro Datensatz.</p><code>history TEXT</code></article>
+          <article class="step-card"><span class="step-number">02</span><h3 data-i18n="flow.step2.title">Änderung einchecken</h3><p data-i18n-html="flow.step2.description"><code>rcs_checkin</code> liefert ein neues Archiv zurück. Speichere den Rückgabewert.</p><code>UPDATE documents SET history = …</code></article>
+          <article class="step-card"><span class="step-number">03</span><h3 data-i18n="flow.step3.title">Version abrufen</h3><p data-i18n="flow.step3.description">Checkout, Metadaten und Diff sind SQL-Funktionen — direkt abfragbar.</p><code>rcs_checkout(history, '1.1')</code></article>
         </div>
       </div>
     </section>
@@ -73,11 +74,11 @@
     <section class="section" id="sql">
       <div class="wrap">
         <div class="section-heading section-heading-row">
-          <div><p class="eyebrow">Direkt in SQLite</p><h2>SQL zum<br><span>Kopieren.</span></h2></div>
-          <p>Diese Beispiele laufen mit der installierten Erweiterung. Der Browser-Playground darunter ist davon unabhängig und simuliert den Ablauf.</p>
+          <div><p class="eyebrow" data-i18n="sql.eyebrow">Direkt in SQLite</p><h2 data-i18n-html="sql.title">SQL zum<br><span>Kopieren.</span></h2></div>
+          <p data-i18n="sql.description">Diese Beispiele laufen mit der installierten Erweiterung. Der Browser-Playground darunter ist davon unabhängig und simuliert den Ablauf.</p>
         </div>
         <div class="code-grid">
-          <article class="code-card"><div class="code-title"><span>01</span> Archiv anlegen <button class="copy-button" data-copy="sql-create" aria-label="SQL-Beispiel kopieren">Kopieren</button></div><pre id="sql-create"><code>CREATE TABLE documents (
+          <article class="code-card"><div class="code-title"><span>01</span> <span data-i18n="sql.create.title">Archiv anlegen</span> <button class="copy-button" data-copy="sql-create" aria-label="SQL-Beispiel kopieren" data-i18n-aria="sql.copyLabel" data-i18n="sql.copy">Kopieren</button></div><pre id="sql-create"><code data-i18n="sql.create.code">CREATE TABLE documents (
   id INTEGER PRIMARY KEY,
   history TEXT NOT NULL DEFAULT ''
 );
@@ -88,7 +89,7 @@ VALUES (rcs_checkin(
   'Erste Zeile' || char(10),
   'Erstellung'
 ));</code></pre></article>
-          <article class="code-card"><div class="code-title"><span>02</span> Branch &amp; Check-in <button class="copy-button" data-copy="sql-branch" aria-label="SQL-Beispiel kopieren">Kopieren</button></div><pre id="sql-branch"><code>UPDATE documents
+          <article class="code-card"><div class="code-title"><span>02</span> <span data-i18n="sql.branch.title">Branch &amp; Check-in</span> <button class="copy-button" data-copy="sql-branch" aria-label="SQL-Beispiel kopieren" data-i18n-aria="sql.copyLabel" data-i18n="sql.copy">Kopieren</button></div><pre id="sql-branch"><code data-i18n="sql.branch.code">UPDATE documents
 SET history = rcs_create_branch(
   history, 'feature', '1.1'
 )
@@ -101,7 +102,7 @@ SET history = rcs_branch_checkin(
   'Feature begonnen'
 )
 WHERE id = 1;</code></pre></article>
-          <article class="code-card"><div class="code-title"><span>03</span> Revisionen abfragen <button class="copy-button" data-copy="sql-read" aria-label="SQL-Beispiel kopieren">Kopieren</button></div><pre id="sql-read"><code>SELECT rcs_head(history),
+          <article class="code-card"><div class="code-title"><span>03</span> <span data-i18n="sql.read.title">Revisionen abfragen</span> <button class="copy-button" data-copy="sql-read" aria-label="SQL-Beispiel kopieren" data-i18n-aria="sql.copyLabel" data-i18n="sql.copy">Kopieren</button></div><pre id="sql-read"><code data-i18n="sql.read.code">SELECT rcs_head(history),
        rcs_checkout(history, 'feature'),
        rcs_diff(history, '1.1', 'feature')
 FROM documents
@@ -110,7 +111,7 @@ WHERE id = 1;
 SELECT rcs_revisions(history)
 FROM documents
 WHERE id = 1;</code></pre></article>
-          <article class="code-card"><div class="code-title"><span>04</span> Drei-Wege-Merge <button class="copy-button" data-copy="sql-merge" aria-label="SQL-Beispiel kopieren">Kopieren</button></div><pre id="sql-merge"><code>SELECT rcs_merge(
+          <article class="code-card"><div class="code-title"><span>04</span> <span data-i18n="sql.merge.title">Drei-Wege-Merge</span> <button class="copy-button" data-copy="sql-merge" aria-label="SQL-Beispiel kopieren" data-i18n-aria="sql.copyLabel" data-i18n="sql.copy">Kopieren</button></div><pre id="sql-merge"><code data-i18n="sql.merge.code">SELECT rcs_merge(
   history, '1.1', 'feature', 'stable'
 )
 FROM documents
@@ -122,25 +123,25 @@ WHERE id = 1;</code></pre></article>
     <section class="section section-ink" id="installation">
       <div class="wrap install-layout">
         <div class="section-heading">
-          <p class="eyebrow eyebrow-on-dark">In wenigen Schritten startklar</p>
-          <h2>Baue die<br><span>Erweiterung.</span></h2>
-          <p>SQLiteRCS wird als loadable extension gebaut und kann mit SQLite-Anwendungen verwendet werden, die Erweiterungen laden dürfen.</p>
-          <a class="button button-light" href="https://github.com/matthias-reissner/SQLiteRCS" target="_blank" rel="noreferrer">Quellcode auf GitHub <span aria-hidden="true">↗</span></a>
+          <p class="eyebrow eyebrow-on-dark" data-i18n="install.eyebrow">In wenigen Schritten startklar</p>
+          <h2 data-i18n-html="install.title">Baue die<br><span>Erweiterung.</span></h2>
+          <p data-i18n="install.description">SQLiteRCS wird als loadable extension gebaut und kann mit SQLite-Anwendungen verwendet werden, die Erweiterungen laden dürfen.</p>
+          <a class="button button-light" href="https://github.com/matthias-reissner/SQLiteRCS" target="_blank" rel="noreferrer"><span data-i18n="install.source">Quellcode auf GitHub</span> <span aria-hidden="true">↗</span></a>
         </div>
         <div class="install-steps">
-          <article><span>01</span><div><h3>Voraussetzungen</h3><p>C-Compiler, Python 3 und SQLite-Entwicklungsheader (`sqlite3.h`, `sqlite3ext.h`).</p></div></article>
-          <article><span>02</span><div><h3>Erweiterung bauen</h3><pre><code># Linux / macOS
+          <article><span>01</span><div><h3 data-i18n="install.step1.title">Voraussetzungen</h3><p data-i18n="install.step1.description">C-Compiler, Python 3 und SQLite-Entwicklungsheader (`sqlite3.h`, `sqlite3ext.h`).</p></div></article>
+          <article><span>02</span><div><h3 data-i18n="install.step2.title">Erweiterung bauen</h3><pre><code data-i18n="install.step2.code"># Linux / macOS
 make
 
 # Windows: x64 Developer Prompt
 set SQLITE_INCLUDE_DIR=C:\path\to\sqlite
 build.bat</code></pre></div></article>
-          <article><span>03</span><div><h3>Tests ausführen</h3><pre><code>SQLITERCS_EXTENSION=./sqlitercs.so make test
+          <article><span>03</span><div><h3 data-i18n="install.step3.title">Tests ausführen</h3><pre><code data-i18n="install.step3.code">SQLITERCS_EXTENSION=./sqlitercs.so make test
 
 # Windows
 set SQLITERCS_EXTENSION=sqlitercs.dll
 python -m unittest discover -s tests -v</code></pre></div></article>
-          <article><span>04</span><div><h3>Extension laden</h3><pre><code>conn.enable_load_extension(True)
+          <article><span>04</span><div><h3 data-i18n="install.step4.title">Extension laden</h3><pre><code>conn.enable_load_extension(True)
 conn.load_extension("sqlitercs")</code></pre></div></article>
         </div>
       </div>
@@ -149,43 +150,43 @@ conn.load_extension("sqlitercs")</code></pre></div></article>
     <section class="section section-paper" id="playground">
       <div class="wrap">
         <div class="section-heading section-heading-row playground-heading">
-          <div><p class="eyebrow">Dein Browser-Playground</p><h2>Check-in. Checkout.<br><span>Vergleichen.</span></h2></div>
-          <p>Ändere den Text, checke Revisionen ein und erkunde den Verlauf. Probiere auch Branches und verschachtelte Branches.</p>
+          <div><p class="eyebrow" data-i18n="demo.eyebrow">Dein Browser-Playground</p><h2 data-i18n-html="demo.title">Check-in. Checkout.<br><span>Vergleichen.</span></h2></div>
+          <p data-i18n="demo.description">Ändere den Text, checke Revisionen ein und erkunde den Verlauf. Probiere auch Branches und verschachtelte Branches.</p>
         </div>
-        <div class="demo-notice"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Interaktive Simulation:</strong> Dieser Playground lädt keine SQLite-Erweiterung. Er bildet den Text- und Revisionsablauf im Browser nach. Deine Daten bleiben lokal in diesem Browser.</p><button id="reset-demo" class="text-button">Zurücksetzen</button></div>
+        <div class="demo-notice"><span class="notice-icon" aria-hidden="true">i</span><p data-i18n-html="demo.notice"><strong>Interaktive Simulation:</strong> Dieser Playground lädt keine SQLite-Erweiterung. Er bildet den Text- und Revisionsablauf im Browser nach. Deine Daten bleiben lokal in diesem Browser.</p><button id="reset-demo" class="text-button" data-i18n="demo.reset">Zurücksetzen</button></div>
         <div class="playground">
           <div class="workspace-panel">
-            <div class="panel-topline"><span>ARBEITSBEREICH</span><span id="revision-count">0 Revisionen</span></div>
-            <h3>Dokument bearbeiten</h3>
-            <label class="field-label" for="content-input">Dateiinhalt</label>
+            <div class="panel-topline"><span data-i18n="demo.workspace">ARBEITSBEREICH</span><span id="revision-count">0 Revisionen</span></div>
+            <h3 data-i18n="demo.editDocument">Dokument bearbeiten</h3>
+            <label class="field-label" for="content-input" data-i18n="demo.fileContent">Dateiinhalt</label>
             <textarea id="content-input" spellcheck="false" aria-describedby="content-hint"></textarea>
-            <p class="field-hint" id="content-hint">Nicht-leerer Text muss mit einem Zeilenumbruch enden.</p>
-            <label class="field-label" for="log-input">Änderungskommentar</label>
-            <input id="log-input" type="text" maxlength="160" placeholder="z. B. Dokumentation ergänzt">
+            <p class="field-hint" id="content-hint" data-i18n="demo.newlineHint">Nicht-leerer Text muss mit einem Zeilenumbruch enden.</p>
+            <label class="field-label" for="log-input" data-i18n="demo.commitMessage">Änderungskommentar</label>
+            <input id="log-input" type="text" maxlength="160" placeholder="z. B. Dokumentation ergänzt" data-i18n-placeholder="demo.logPlaceholder">
             <div class="form-divider"></div>
             <div class="branch-controls">
-              <label class="field-label" for="branch-parent">Branch erstellen aus</label>
-              <select id="branch-parent" disabled><option value="">Zuerst Revision einchecken</option></select>
+              <label class="field-label" for="branch-parent" data-i18n="demo.branchFrom">Branch erstellen aus</label>
+              <select id="branch-parent" disabled><option value="" data-i18n="demo.noRevisionsYet">Zuerst Revision einchecken</option></select>
               <div class="inline-input"><input id="branch-name" type="text" maxlength="32" placeholder="feature"><button id="create-branch" class="button button-outline" disabled>Branch +</button></div>
             </div>
-            <div class="checkin-row"><label class="field-label" for="checkin-target">Einchecken in</label><div class="inline-input"><select id="checkin-target" disabled><option value="trunk">Trunk</option></select><button id="checkin" class="button button-accent">Check-in <span aria-hidden="true">↗</span></button></div></div>
+            <div class="checkin-row"><label class="field-label" for="checkin-target" data-i18n="demo.checkinInto">Einchecken in</label><div class="inline-input"><select id="checkin-target" disabled><option value="trunk" data-i18n="demo.trunk">Trunk</option></select><button id="checkin" class="button button-accent"><span data-i18n="demo.checkin">Check-in</span> <span aria-hidden="true">↗</span></button></div></div>
             <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
           </div>
           <div class="history-panel">
-            <div class="panel-topline"><span>REVISIONEN</span><span class="live-indicator"><i></i> LOKAL</span></div>
-            <h3>Verlauf ansehen</h3>
+            <div class="panel-topline"><span data-i18n="demo.revisions">REVISIONEN</span><span class="live-indicator"><i></i> <span data-i18n="demo.local">LOKAL</span></span></div>
+            <h3 data-i18n="demo.viewHistory">Verlauf ansehen</h3>
             <div class="revision-list" id="revision-list"></div>
             <div class="history-actions">
-              <label class="field-label" for="checkout-revision">Revision auswählen</label>
-              <div class="inline-input"><select id="checkout-revision" disabled><option value="">Keine Revisionen</option></select><button id="checkout" class="button button-outline" disabled>Checkout</button></div>
-              <label class="field-label compare-label" for="diff-revision">Vergleichen mit</label>
-              <div class="inline-input"><select id="diff-revision" disabled><option value="">Keine Revisionen</option></select><button id="show-diff" class="button button-outline" disabled>Diff</button></div>
+              <label class="field-label" for="checkout-revision" data-i18n="demo.selectRevision">Revision auswählen</label>
+              <div class="inline-input"><select id="checkout-revision" disabled><option value="" data-i18n="demo.noRevisions">Keine Revisionen</option></select><button id="checkout" class="button button-outline" disabled data-i18n="demo.checkout">Checkout</button></div>
+              <label class="field-label compare-label" for="diff-revision" data-i18n="demo.compareWith">Vergleichen mit</label>
+              <div class="inline-input"><select id="diff-revision" disabled><option value="" data-i18n="demo.noRevisions">Keine Revisionen</option></select><button id="show-diff" class="button button-outline" disabled data-i18n="demo.diff">Diff</button></div>
             </div>
           </div>
           <div class="result-panel">
-            <div class="panel-topline"><span>ERGEBNIS</span><span id="result-kind">CHECKOUT</span></div>
-            <div id="result-content" class="result-content empty-result">Checke deine erste Revision ein, um Inhalt oder Diff zu sehen.</div>
-            <div class="archive-toggle-row"><button id="toggle-history" class="text-button" disabled>Verlaufsdaten ansehen <span aria-hidden="true">＋</span></button><button id="download-history" class="text-button" disabled>JSON exportieren ↓</button></div>
+            <div class="panel-topline"><span data-i18n="demo.result">ERGEBNIS</span><span id="result-kind">CHECKOUT</span></div>
+            <div id="result-content" class="result-content empty-result" data-i18n="demo.emptyResult">Checke deine erste Revision ein, um Inhalt oder Diff zu sehen.</div>
+            <div class="archive-toggle-row"><button id="toggle-history" class="text-button" disabled><span data-i18n="demo.viewData">Verlaufsdaten ansehen</span> <span aria-hidden="true">＋</span></button><button id="download-history" class="text-button" disabled><span data-i18n="demo.exportJson">JSON exportieren</span> ↓</button></div>
             <pre id="history-preview" class="archive-preview" hidden></pre>
           </div>
         </div>
@@ -194,13 +195,13 @@ conn.load_extension("sqlitercs")</code></pre></div></article>
 
     <section class="section about-section">
       <div class="wrap about-layout">
-        <div><p class="eyebrow">Gut zu wissen</p><h2>Ein fokussierter<br><span>erster Schritt.</span></h2></div>
-        <div class="about-copy"><p>SQLiteRCS unterstützt trunk- und verschachtelte Branch-Revisionen, Tags, mehrteilige Diff-Hunks, Drei-Wege-Merges und den Import/Export textueller RCS-Archive.</p><p>Inhalte sind UTF-8-Text, keine Binärdaten; nicht-leere Inhalte enden mit einem Zeilenumbruch. Importierte Zugriffslisten und Sperren werden normalisiert, aber nicht erhalten oder durchgesetzt.</p><a class="inline-link" href="https://github.com/matthias-reissner/SQLiteRCS#sql-api" target="_blank" rel="noreferrer">Vollständige SQL-API ansehen <span aria-hidden="true">↗</span></a></div>
+        <div><p class="eyebrow" data-i18n="about.eyebrow">Gut zu wissen</p><h2 data-i18n-html="about.title">Ein fokussierter<br><span>erster Schritt.</span></h2></div>
+        <div class="about-copy"><p data-i18n="about.description">SQLiteRCS unterstützt trunk- und verschachtelte Branch-Revisionen, Tags, mehrteilige Diff-Hunks, Drei-Wege-Merges und den Import/Export textueller RCS-Archive.</p><p data-i18n="about.limitations">Inhalte sind UTF-8-Text, keine Binärdaten; nicht-leere Inhalte enden mit einem Zeilenumbruch. Importierte Zugriffslisten und Sperren werden normalisiert, aber nicht erhalten oder durchgesetzt.</p><a class="inline-link" href="https://github.com/matthias-reissner/SQLiteRCS#sql-api" target="_blank" rel="noreferrer"><span data-i18n="about.api">Vollständige SQL-API ansehen</span> <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">r.</span><span>SQLite<span class="brand-light">RCS</span></span></a><p>Revisionsgeschichte als Text. In deiner SQLite-Datenbank.</p><a href="https://github.com/matthias-reissner/SQLiteRCS" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">r.</span><span>SQLite<span class="brand-light">RCS</span></span></a><p data-i18n="footer.tagline">Revisionsgeschichte als Text. In deiner SQLite-Datenbank.</p><a href="https://github.com/matthias-reissner/SQLiteRCS" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
 </body>

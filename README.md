@@ -4,6 +4,7 @@ SQLiteRCS is a revision control system for SQLite, similar to
 [PostRCS](https://github.com/matthias-reissner/postrcs).
 
 Try the [interactive GitHub Pages demo](https://matthias-reissner.github.io/SQLiteRCS/).
+The demo can be switched between German and English using the language button.
 
 ## Design
 
