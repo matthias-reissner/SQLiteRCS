@@ -3,6 +3,8 @@
 SQLiteRCS is a revision control system for SQLite, similar to
 [PostRCS](https://github.com/matthias-reissner/postrcs).
 
+Try the [interactive GitHub Pages demo](https://matthias-reissner.github.io/SQLiteRCS/).
+
 ## Design
 
 SQLite has no extension-defined scalar data types, so an archive is represented
@@ -105,6 +107,13 @@ python -m unittest discover -s tests -v
 On Unix-like systems, use `SQLITERCS_EXTENSION=./sqlitercs.so` before the
 Python command. The suite includes an archive created by GNU RCS 5.10.1 with
 trunk, tag, branch, and nested-branch revisions.
+
+## GitHub Pages demo
+
+The static demo lives in `docs/`. The GitHub Actions workflow deploys it to
+GitHub Pages after pushes to `main` that change `docs/`. Set **Settings →
+Pages → Build and deployment → Source** to **GitHub Actions**. The demo is a
+browser-side simulation; it does not load or execute the SQLite extension.
 
 ## Example
 
